@@ -540,3 +540,6 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: /home/administra
 	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
 	... 60 more
+2024-05-15 16:50:21.650222-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM LIVRO ID [*]MARCA MODELO"; SQL statement:
+SELECT * FROM LIVRO ID MARCA MODELO [42000-224]
