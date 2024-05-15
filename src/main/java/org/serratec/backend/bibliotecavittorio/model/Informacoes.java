@@ -27,4 +27,28 @@ public class Informacoes {
 	@Column(nullable = false, length = 40)
 	private String editora;
 
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
+	public LocalDate getPublicacao() {
+		return publicacao;
+	}
+
+	public void setPublicacao(LocalDate publicacao) {
+		this.publicacao = publicacao;
+	}
+
+	public String getEditora() {
+		return editora;
+	}
+
+	public void setEditora(String editora) {
+		this.editora = editora;
+	}
+
 }

@@ -1,5 +1,7 @@
 package org.serratec.backend.bibliotecavittorio.model;
 
+
+
 import jakarta.persistence.Column;
 
 import jakarta.persistence.Embedded;
@@ -24,9 +26,38 @@ public class Livro {
 	@Column(nullable = false, length = 40)
 	private String titulo;
 
-	/*
+	
 	@Embedded
 	private Informacoes informacoes;
-	*/
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+
+	public Informacoes getInformacoes() {
+		return informacoes;
+	}
+
+
+	public void setInformacoes(Informacoes informacoes) {
+		this.informacoes = informacoes;
+	}
 
 }
