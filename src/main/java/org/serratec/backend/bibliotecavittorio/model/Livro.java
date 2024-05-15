@@ -20,7 +20,7 @@ public class Livro {
 	private Long id;
 
 	@NotBlank(message = "Preencha o titulo do livro")
-	@Size(max = 7)
+	@Size(max = 40)
 	@Column(nullable = false, length = 40)
 	private String titulo;
 
