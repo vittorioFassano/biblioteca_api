@@ -7,6 +7,7 @@ import org.serratec.backend.bibliotecavittorio.repository.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -46,5 +47,15 @@ public class LivroController {
 		livro = livroRepository.save(livro);
 		return ResponseEntity.ok(livro);
 	}
+	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> deletar(@PathVariable Long id) {
+		if (!livroRepository.existsById(id)) {
+			return ResponseEntity.notFound().build();
+		}
+		livroRepository.deleteById(id);
+		return ResponseEntity.noContent().build();
+	}
+	
 
 }
