@@ -19,3 +19,14 @@ Esta é uma API para gerenciar livros na Biblioteca Vittorio.
 - **Deletar um livro**: `DELETE /livros/{id}`
 
    localhost:8080/livros/{id}
+
+## Exemplo de requisição post para cadastrar um livro
+
+{
+  "titulo": "Harry Potter e o Cálice de Fogo",
+  "informacoes": {
+    "autor": "J.K. Rowling",
+    "publicacao": "08-07-2000",
+    "editora": "Bloomsbury"
+  }
+}
