@@ -37,7 +37,7 @@ public class LivroController {
 		Livro novoLivro = livroRepository.save(livro);
 		return ResponseEntity.status(HttpStatus.CREATED).body(novoLivro);
 	}
-	
+
 	@PutMapping("/{id}")
 	public ResponseEntity<Livro> alterar(@PathVariable Long id, @Valid @RequestBody Livro livro) {
 		if (!livroRepository.existsById(id)) {
@@ -47,7 +47,7 @@ public class LivroController {
 		livro = livroRepository.save(livro);
 		return ResponseEntity.ok(livro);
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Void> deletar(@PathVariable Long id) {
 		if (!livroRepository.existsById(id)) {
@@ -56,6 +56,5 @@ public class LivroController {
 		livroRepository.deleteById(id);
 		return ResponseEntity.noContent().build();
 	}
-	
 
 }

@@ -1,7 +1,5 @@
 package org.serratec.backend.bibliotecavittorio.model;
 
-import java.time.LocalDate;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.Column;
@@ -38,7 +36,7 @@ public class Informacoes {
 		return publicacao;
 	}
 
-	@DateTimeFormat(pattern = "dd-MM-yyyy") 
+	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	public void setPublicacao(String publicacao) {
 		this.publicacao = publicacao;
 	}
