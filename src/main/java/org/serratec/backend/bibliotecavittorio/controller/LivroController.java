@@ -35,5 +35,12 @@ public class LivroController {
 		return ResponseEntity.ok(livroRepository.findAll());
 	}
 	
+	 @PostMapping
+	    @ResponseStatus(HttpStatus.CREATED)
+	    public ResponseEntity<Livro> cadastrar(@Valid @RequestBody Livro livro) {
+	        Livro novoLivro = livroRepository.save(livro);
+	        return ResponseEntity.status(HttpStatus.CREATED).body(novoLivro);
+	    }
+	
 
 }

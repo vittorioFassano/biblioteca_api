@@ -1,7 +1,5 @@
 package org.serratec.backend.bibliotecavittorio.model;
 
-
-
 import jakarta.persistence.Column;
 
 import jakarta.persistence.Embedded;
@@ -22,10 +20,9 @@ public class Livro {
 	private Long id;
 
 	@NotBlank(message = "Preencha o titulo do livro")
-	@Size(max = 40)
-	@Column(nullable = false, length = 40)
-	private String titulo;
-
+    @Size(max = 100) // Defina o tamanho máximo adequado para o título
+    @Column(nullable = false, length = 100) // Ajuste o tamanho da coluna no banco de dados
+    private String titulo;
 	
 	@Embedded
 	private Informacoes informacoes;

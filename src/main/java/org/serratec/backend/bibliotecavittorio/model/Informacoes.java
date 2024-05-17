@@ -18,13 +18,12 @@ public class Informacoes {
 	private String autor;
 
 	@NotBlank(message = "Preencha a data de publicação do livro")
-	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	@Column(nullable = false)
-	private LocalDate publicacao;
+	private String publicacao;
 
 	@NotBlank(message = "Preencha o autor do livro")
-	@Size(max = 40)
-	@Column(nullable = false, length = 40)
+	@Size(max = 100)
+	@Column(nullable = false, length = 100)
 	private String editora;
 
 	public String getAutor() {
@@ -35,11 +34,12 @@ public class Informacoes {
 		this.autor = autor;
 	}
 
-	public LocalDate getPublicacao() {
+	public String getPublicacao() {
 		return publicacao;
 	}
 
-	public void setPublicacao(LocalDate publicacao) {
+	@DateTimeFormat(pattern = "dd-MM-yyyy") 
+	public void setPublicacao(String publicacao) {
 		this.publicacao = publicacao;
 	}
 
